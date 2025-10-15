@@ -3,10 +3,10 @@ var router = express.Router();
 
 var carController = require('../controllers/cars');
 
-router.get('/carId', carController.getAll);
-router.post('/:carId', carController.create);
-router.get('/:carId', carController.getCar);
-router.put('/:carId', carController.update);
-router.delete('/:carId', carController.remove);
+router.get('/cars', carController.getAll);
+router.post('/cars/:id', carController.create);
+router.get('/cars', carController.getCar);
+router.put('/cars/:id', carController.update);
+router.delete('/cars/:id', carController.remove);
 
 module.exports = router;
